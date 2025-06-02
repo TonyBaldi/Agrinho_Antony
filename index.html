@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroNovaLar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Botão de sair no canto superior direito -->
+    <button id="logoutBtn" onclick="logout()" style="display: none;">Sair</button>
+
+    <header>
+        <div class="header-image">
+            <h1 class="site-title">AgroNovaLar</h1>
+        </div>
+    </header>
+
+    <!-- Área de autenticação -->
+    <section class="auth" id="authSection">
+        <h2>Entrar ou Cadastrar</h2>
+        <input type="email" id="email" placeholder="Seu email" />
+        <input type="password" id="senha" placeholder="Sua senha" />
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="login()">Entrar</button>
+    </section>
+
+    <!-- Área de publicação -->
+    <section class="publicar" id="publicarSection" style="display: none;">
+        <textarea id="textoPublicacao" placeholder="Descreva seu produto agrícola aqui..."></textarea>
+        <button onclick="publicar()">Publicar</button>
+    </section>
+
+    <main id="publicacoes">
+        <!-- Publicações aparecem aqui -->
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- BARRA LATERAL DIREITA -->
+    <aside class="sidebar">
+        <button onclick="logout()">Sair</button>
+        <button onclick="irParaPrincipal()">Página Principal</button>
+        <!-- Futuras abas -->
+    </aside>
+</body>
+
+</html>

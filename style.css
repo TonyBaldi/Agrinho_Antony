@@ -1,0 +1,182 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000; /* fundo preto */
+  color: #f0f8ff; /* texto claro (quase branco azulado) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER COM IMAGEM */
+.header-image {
+  background-image: url('caminho/para/sua-imagem.jpg'); /* substitua pelo caminho real */
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #00bfff;
+}
+
+.site-title {
+  font-size: 48px;
+  color: #00bfff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00bfff;
+}
+
+/* SEÇÕES COMUNS */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #111;
+  border: 1px solid #00bfff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00bfff33;
+}
+
+/* AUTENTICAÇÃO */
+.auth h2 {
+  margin-bottom: 15px;
+  color: #00bfff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.auth input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+}
+
+.auth button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00bfff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth button:hover {
+  background-color: #009acd;
+}
+
+/* PUBLICAÇÃO */
+.publicar textarea {
+  width: 90%;
+  height: 120px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #00bfff;
+  border-radius: 10px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.publicar button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #00bfff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.publicar button:hover {
+  background-color: #009acd;
+}
+
+/* PUBLICAÇÕES */
+.publicacao {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #00bfff;
+  border-radius: 8px;
+}
+
+.publicacao p {
+  margin: 5px 0;
+}
+
+.publicacao strong {
+  color: #00bfff;
+}
+
+/* Botão de logout no topo direito */
+#logoutBtn {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #00bfff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 10px #00bfff;
+  transition: 0.3s;
+}
+
+#logoutBtn:hover {
+  background-color: #009acd;
+}
+
+/* BARRA LATERAL DIREITA */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 100vh;
+  background-color: #111;
+  border-left: 2px solid #00bfff;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: -2px 0 10px #00bfff33;
+  z-index: 1000;
+}
+
+.sidebar button {
+  width: 140px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #00bfff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #009acd;
+}
