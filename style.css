@@ -180,3 +180,169 @@ section {
 .sidebar button:hover {
   background-color: #009acd;
 }
+
+.input-senha {
+  position: relative;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.input-senha input {
+  width: 100%;
+  padding-right: 70px; /* um pouco mais para o botão menor */
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  transform: translateY(-50%);
+  background-color: #00bfff;
+  border: none;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: normal; /* Alterado de 1 para normal */
+  user-select: none;
+  box-sizing: border-box;
+  height: auto; /* Alterado de fixo para auto */
+  min-width: 50px;
+  display: flex;
+  align-items: center;   /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.toggle-senha:hover {
+  background-color: #009acd;
+}
+
+.sidebar {
+  display: none; /* por padrão escondida */
+  /* os outros estilos você já tem */
+}
+
+.publicacao img {
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Quando clicada (modo expandido) */
+.publicacao img.expandida {
+  max-width: 90%;
+  transform: scale(1.05);
+  z-index: 1001;
+  position: relative;
+}
+
+.campo-imagem {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo-imagem label {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.publicar input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+}
+
+/* Estilo básico para o select */
+#unidade {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  appearance: none; /* Remove o estilo padrão do navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Para colocar uma seta personalizada (opcional) */
+#unidade {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+
+/* Também para garantir que o container do select fique alinhado */
+#unidade:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+select, input[type="text"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+  width: 200px; /* ou 100%, depende do seu layout */
+  box-sizing: border-box;
+}
+
+select {
+  background-color: #fff;
+  appearance: none; /* Remove setinha padrão (nos navegadores que suportam) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Container pra alinhar lado a lado, opcional */
+.campo-preco-unidade {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-button {
+    margin-top: 15px; /* Espaçamento acima do botão */
+    padding: 8px 15px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    background-color: #00bfff; /* Cor de fundo (azul vibrante) */
+    color: #000; /* Cor do texto (preto) */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    transition: background 0.3s ease; /* Transição suave na cor de fundo */
+    display: block; /* Ocupa a largura total para centralizar */
+    width: fit-content; /* Ajusta a largura ao conteúdo do texto */
+    margin-left: auto; /* Centraliza o botão dentro da publicação */
+    margin-right: auto; /* Centraliza o botão dentro da publicação */
+}
+
+.contact-button:hover {
+    background-color: #009acd; /* Cor de fundo ao passar o mouse (azul mais escuro) */
+}

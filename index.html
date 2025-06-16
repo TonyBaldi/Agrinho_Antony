@@ -5,6 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AgroNoLar</title>
+
+    <!-- Firebase SDKs (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics-compat.js"></script>
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -22,15 +28,55 @@
     <!-- Área de autenticação -->
     <section class="auth" id="authSection">
         <h2>Entrar ou Cadastrar</h2>
+
+        <div id="campoNomeUsuario" style="display: none;">
+            <input type="text" id="nomeUsuario" placeholder="Seu nome de usuário" />
+        </div>
+
         <input type="email" id="email" placeholder="Seu email" />
-        <input type="password" id="senha" placeholder="Sua senha" />
-        <button onclick="cadastrar()">Cadastrar</button>
-        <button onclick="login()">Entrar</button>
+
+        <div class="input-senha">
+            <input type="password" id="senha" placeholder="Sua senha" />
+            <button type="button" class="toggle-senha" onclick="toggleSenha('senha')">Mostrar</button>
+        </div>
+
+        <div id="campoConfirmarSenha" class="input-senha" style="display: none;">
+            <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" />
+            <button type="button" class="toggle-senha" onclick="toggleSenha('confirmarSenha')">Mostrar</button>
+        </div>
+
+        <button id="btnCadastrar" onclick="mostrarCadastro()">Cadastrar</button>
+        <button id="btnLogin" onclick="login()">Entrar</button>
+
+        <button id="btnFinalizarCadastro" onclick="finalizarCadastro()" style="display:none;">Finalizar
+            Cadastro</button>
+
     </section>
 
     <!-- Área de publicação -->
     <section class="publicar" id="publicarSection" style="display: none;">
         <textarea id="textoPublicacao" placeholder="Descreva seu produto agrícola aqui..."></textarea>
+
+        <div class="campo-imagem">
+            <label for="imagemProduto">Imagem do produto:</label>
+            <input type="file" id="imagemProduto" accept="image/*" />
+        </div>
+
+
+        <img id="previewImagem" style="max-width: 100%; margin-top: 10px; display: none;" />
+
+        <div class="campo-preco-unidade">
+            <select id="unidade">
+                <option value="">Selecione a unidade</option>
+                <option value="kg">kg</option>
+                <option value="un">unidade</option>
+                <option value="pacote">pacote</option>
+                <option value="litro">litro</option>
+            </select>
+
+            <input type="text" id="preco" placeholder="Preço por unidade" />
+        </div>
+
         <button onclick="publicar()">Publicar</button>
     </section>
 
@@ -38,6 +84,13 @@
         <!-- Publicações aparecem aqui -->
     </main>
 
+    <!-- Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <!-- Firebase Analytics (opcional) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics-compat.js"></script>
+    <!-- Script.js -->
     <script src="script.js"></script>
 
     <!-- BARRA LATERAL DIREITA -->
